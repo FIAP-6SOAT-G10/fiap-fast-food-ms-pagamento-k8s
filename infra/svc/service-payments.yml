@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-payments
+spec:
+  type: LoadBalancer
+  selector:
+    app: payments
+  ports:
+    - port: 80
+      targetPort: 8080
+      nodePort: 30000
