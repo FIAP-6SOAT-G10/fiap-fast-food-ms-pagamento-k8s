@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: payments
-          image: 317575625452.dkr.ecr.us-east-1.amazonaws.com/payments:1.0
+          image: 427107249392.dkr.ecr.us-east-1.amazonaws.com/payments:1.0
           imagePullPolicy: Always
           env:
             - name: DB_USERNAME
