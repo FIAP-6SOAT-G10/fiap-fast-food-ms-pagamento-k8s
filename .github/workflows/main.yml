@@ -2,8 +2,7 @@ name: Create K8S on EKS
 
 on:
   workflow_run:
-    workflows:
-      - Build and Deploy to ECR
+    workflows: ["Build and Deploy to ECR"]
     types:
       - completed
 
