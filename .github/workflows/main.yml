@@ -1,10 +1,8 @@
 name: Create K8S on EKS
 
 on:
-  workflow_run:
-    workflows: ["Build and Deploy to ECR"]
-    types:
-      - completed
+  repository_dispatch:
+    types: [trigger-deploy]
 
 env:
   EKS_CLUSTER_NAME: fiap_fast_food_eks
