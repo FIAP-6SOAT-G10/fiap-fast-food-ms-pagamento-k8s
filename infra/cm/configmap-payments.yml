@@ -5,4 +5,4 @@ metadata:
 data:
   DB_HOST: payment-cluster.csj6jqdpbwfb.us-east-1.redshift.amazonaws.com
   DB_NAME: payments
-  MP_NOTIFICATION_URL: http://a02b372ff5cb740f78d7afe989a89690-556733305.us-east-1.elb.amazonaws.com/api/payments/confirmation
+  MP_NOTIFICATION_URL: http://ae67372b326a14e38993d34c34f67f43-1621291954.us-east-1.elb.amazonaws.com/api/payments/confirmation
