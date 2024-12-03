@@ -45,7 +45,13 @@ jobs:
       - name: Update Kubeconfig
         run: aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --region $AWS_REGION
 
-      - name: Deploy to EKS
+      - name: Destroying EKS
+        run: |
+          kubectl delete --validate=false -f infra/cm/.
+          kubectl delete --validate=false -f infra/secrets/.
+          kubectl delete --validate=false -f infra/deployment/.
+
+      - name: Recreating EKS
         run: |
           kubectl apply --validate=false -f infra/cm/.
           kubectl apply --validate=false -f infra/secrets/.
