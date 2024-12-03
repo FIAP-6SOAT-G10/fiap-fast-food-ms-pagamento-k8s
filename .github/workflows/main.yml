@@ -47,9 +47,9 @@ jobs:
 
       - name: Destroying EKS
         run: |
-          kubectl delete -f infra/cm/.
-          kubectl delete -f infra/secrets/.
-          kubectl delete -f infra/deployment/.
+          kubectl delete -f --ignore-not-found=true infra/cm/.
+          kubectl delete -f --ignore-not-found=true infra/secrets/.
+          kubectl delete -f --ignore-not-found=true infra/deployment/.
 
       - name: Recreating EKS
         run: |
